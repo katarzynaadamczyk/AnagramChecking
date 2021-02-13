@@ -1,4 +1,9 @@
-def AnagramChecking(s1, s2, s3):
+# as I undestand uppercase is different than the lowercase as it is a different character
+# in ASCII or UNICODE
+# if you consider them as same then it is needed to change the below code so that each
+# character is firstly changed to lowercase and then added / checked in the dictionary
+
+def are_anagrams(s1, s2, s3):
     # check if the size of each string is equal
     if len(s1) == len(s2) and len(s1) == len(s3):
         # if so create a list of dictionaries for each string
@@ -34,10 +39,10 @@ def AnagramChecking(s1, s2, s3):
     return False
 
 def main():
-    print("Result for 'kasia', 'asia', 'basia' is " + str(AnagramChecking('kasia', 'asia', 'basia')))
-    print("Result for 'kasia', 'asiak', 'askia' is " + str(AnagramChecking('kasia', 'asiak', 'askia')))
-    print("Result for 'kasia', 'asiak', 'asial' is " + str(AnagramChecking('kasia', 'asiak', 'asial')))
-    print("Result for 'kasia', 'asiak', 'asmia' is " + str(AnagramChecking('kasia', 'asiak', 'asmia')))
+    print("Result for 'kasia', 'kasia', 'Kasia' is " + str(are_anagrams('kasia', 'kasia', 'Kasia')))
+    print("Result for 'kasia', 'asiak', 'askia' is " + str(are_anagrams('kasia', 'asiak', 'askia')))
+    print("Result for 'kasia', 'asiak', 'asial' is " + str(are_anagrams('kasia', 'asiak', 'asial')))
+    print("Result for 'kasia', 'asiak', 'asmia' is " + str(are_anagrams('kasia', 'asiak', 'asmia')))
 
 if __name__ == "__main__":
     main()
