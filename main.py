@@ -2,6 +2,7 @@
 # in ASCII or UNICODE
 # if you consider them as same then it is needed to change the below code so that each
 # character is firstly changed to lowercase and then added / checked in the dictionary
+# and comparison of strings in line 10 should be also in lowercase
 
 def are_anagrams(s1, s2, s3):
     # check if the size of each string is equal 
